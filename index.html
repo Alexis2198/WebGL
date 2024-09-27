@@ -85,16 +85,16 @@
 
     BABYLON.SceneLoader.ImportMesh("", "./", "Shaman.glb", scene, function (meshes) {
         var shamanMesh = meshes[0]; 
-        shamanMesh.scaling = new BABYLON.Vector3(0.5, 0.5, 0.5); 
-        shamanMesh.position = new BABYLON.Vector3(2, 0, -2); 
-        shamanMesh.rotation = new BABYLON.Vector3(0, Math.PI / 2, 0); 
+        shamanMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1); 
+        shamanMesh.position = new BABYLON.Vector3(0, -2, 0); 
+        shamanMesh.rotation = new BABYLON.Vector3(0, -28, 0); 
     });
 
     BABYLON.SceneLoader.ImportMesh("", "./", "Cart.glb", scene, function (meshes) {
         var cartMesh = meshes[0]; 
-        cartMesh.scaling = new BABYLON.Vector3(0.7, 0.7, 0.7); 
-        cartMesh.position = new BABYLON.Vector3(-2, 0, 2); 
-        cartMesh.rotation = new BABYLON.Vector3(0, -Math.PI / 2, 0); 
+        cartMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1); 
+        cartMesh.position = new BABYLON.Vector3(0, -2, 0); 
+        cartMesh.rotation = new BABYLON.Vector3(0, -28, 0); 
     });
     return scene;
 };
