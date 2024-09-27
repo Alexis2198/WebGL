@@ -79,8 +79,8 @@
     BABYLON.SceneLoader.ImportMesh("", "./", "Fondo.glb", scene, function (meshes) {
         var groundMesh = meshes[0]; // Suponiendo que la primera malla en el archivo es el suelo
         groundMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1); // Ajusta la escala según sea necesario
-        groundMesh.position = new BABYLON.Vector3(0, -2, 0); // Ajusta la posición para que sea el suelo
-        groundMesh.rotation = new BABYLON.Vector3(0, -30, 0); // Ajusta la rotación si es necesario
+        groundMesh.position = new BABYLON.Vector3(0, -1.5, 0); // Ajusta la posición para que sea el suelo
+        groundMesh.rotation = new BABYLON.Vector3(0, -0, 0); // Ajusta la rotación si es necesario
     
         var groundMaterial = new BABYLON.StandardMaterial("groundMaterial", scene);
 
@@ -95,15 +95,15 @@
     BABYLON.SceneLoader.ImportMesh("", "./", "Shaman.glb", scene, function (meshes) {
         var shamanMesh = meshes[0]; 
         shamanMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1); 
-        shamanMesh.position = new BABYLON.Vector3(0, -2, 0); 
-        shamanMesh.rotation = new BABYLON.Vector3(0, -30, 0); 
+        shamanMesh.position = new BABYLON.Vector3(0, -1.5, 0); 
+        shamanMesh.rotation = new BABYLON.Vector3(0, 0, 0); 
     });
 
     BABYLON.SceneLoader.ImportMesh("", "./", "Cart.glb", scene, function (meshes) {
         var cartMesh = meshes[0]; 
         cartMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1); 
-        cartMesh.position = new BABYLON.Vector3(0, -2, 0); 
-        cartMesh.rotation = new BABYLON.Vector3(0, -30, 0); 
+        cartMesh.position = new BABYLON.Vector3(0, -1.5, 0); 
+        cartMesh.rotation = new BABYLON.Vector3(0, 0, 0); 
     });
     return scene;
 };
