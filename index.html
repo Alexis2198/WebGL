@@ -105,6 +105,14 @@
         cartMesh.position = new BABYLON.Vector3(0, -1.5, 0); 
         cartMesh.rotation = new BABYLON.Vector3(0, 0, 0); 
     });
+
+    BABYLON.SceneLoader.ImportMesh("", "./", "Tree.glb", scene, function (meshes) {
+        var cartMesh = meshes[0]; 
+        cartMesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1); 
+        cartMesh.position = new BABYLON.Vector3(0, -1.5, 0); 
+        cartMesh.rotation = new BABYLON.Vector3(0, 0, 0); 
+    });
+
     return scene;
 };
                 window.initFunction = async function() {
