@@ -79,24 +79,12 @@
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
 
-    // Our built-in 'ground' shape.
-    var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 6, height: 6}, scene);
-    let groundMaterial = new BABYLON.StandardMaterial("Ground Material", scene);
-    ground.material = groundMaterial;
-    let groundTexture = new BABYLON.Texture(Assets.textures.checkerboard_basecolor_png.path, scene);
-    groundMaterial.diffuseColor = BABYLON.Color3.Red();
-    ground.material.diffuseTexture = groundTexture;
-
-    BABYLON.SceneLoader.ImportMesh("", "./", "Fondo.glb", scene, function(newMeshes){
-        newMeshes[0].scaling = new BABYLON.Vector3(0.1, 0.1, 0.1);
+    BABYLON.SceneLoader.ImportMesh("", "./", "Fondo.glb", scene, function (meshes) {
+        var groundMesh = meshes[0]; // Suponiendo que la primera malla en el archivo es el suelo
+        groundMesh.scaling = new BABYLON.Vector3(1, 1, 1); // Ajusta la escala según sea necesario
+        groundMesh.position = new BABYLON.Vector3(0, 0, 0); // Ajusta la posición para que sea el suelo
+        groundMesh.rotation = new BABYLON.Vector3(0, 0, 0); // Ajusta la rotación si es necesario
     });
-
-//     BABYLON.SceneLoader.ImportMesh("", "./", "modelo.glb", scene, function (meshes) {
-//     meshes.forEach(function (mesh) {
-//         mesh.scaling = new BABYLON.Vector3(0.1, 0.1, 0.1); // Ajusta la escala según sea necesario
-//     });
-// });
-
     return scene;
 };
                 window.initFunction = async function() {
